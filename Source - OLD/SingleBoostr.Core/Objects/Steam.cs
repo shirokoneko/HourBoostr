@@ -123,7 +123,8 @@ namespace SingleBoostr.Core.Objects
             {
                 //
                 Devs = new List<Friend>() {
-                    new Friend(this, 76561199109931625)
+                    new Friend(this, 76561197961798216),
+                    new Friend(this, 76561198844813270)                    
                 };
 
                 //setup API
