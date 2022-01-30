@@ -2,8 +2,8 @@
   "Applications": [
     {
       "Name":"SingleBoostr",
-      "Version": "4.2.5",
-      "Info": "Larger applicaton window, new font plus more"
+      "Version": "4.2.6",
+      "Info": "Small tweaks"
     },
     {
       "Name":"HourBoostr",
