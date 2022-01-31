@@ -422,6 +422,12 @@ namespace HourBoostr
                     mLog.Write(LogLevel.Warn, $"Account Limit Exceeded. Waiting {delay2} minutes");
                     Thread.Sleep(TimeSpan.FromMinutes(delay2));
                     return;
+
+                case EResult.AlreadyLoggedInElsewhere:
+                    var delay3 = SingleBoostr.Core.Misc.Const.Steam.Delays.ACCOUNT_LOGGEDIN_ELSEWHERE;
+                    mLog.Write(LogLevel.Warn, $"Account Logged on elsewhere. Rechecking in {delay3} minutes");
+                    Thread.Sleep(TimeSpan.FromMinutes(delay3));
+                    return;
             }
 
             /*We didn't account for what happened*/

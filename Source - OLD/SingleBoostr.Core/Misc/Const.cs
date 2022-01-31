@@ -36,6 +36,7 @@ namespace SingleBoostr.Core.Misc
             {
                 public static readonly int RATE_LIMIT_EXCEEDED = 30;
                 public static readonly int ACCOUNT_LIMIT_EXCEEDED = 60;
+                public static readonly int ACCOUNT_LOGGEDIN_ELSEWHERE = 5;
             }
 
             public sealed class Example_Profile
