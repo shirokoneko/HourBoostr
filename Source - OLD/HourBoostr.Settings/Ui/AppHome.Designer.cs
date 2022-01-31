@@ -33,6 +33,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.accountListBox = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbIgnoreAccount = new MetroFramework.Controls.MetroToggle();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbRestartGames = new MetroFramework.Controls.MetroToggle();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbCommunity = new MetroFramework.Controls.MetroToggle();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbJoinGroup = new MetroFramework.Controls.MetroToggle();
             this.label1 = new System.Windows.Forms.Label();
             this.cbOnlineStatus = new MetroFramework.Controls.MetroToggle();
             this.OSLabel = new System.Windows.Forms.Label();
@@ -57,17 +66,10 @@
             this.lblStartBooster = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbJoinGroup = new MetroFramework.Controls.MetroToggle();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbCommunity = new MetroFramework.Controls.MetroToggle();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbRestartGames = new MetroFramework.Controls.MetroToggle();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbIgnoreAccount = new MetroFramework.Controls.MetroToggle();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbCheckForUpdates = new MetroFramework.Controls.MetroRadioButton();
             this.cbHideToTray = new MetroFramework.Controls.MetroRadioButton();
+            this.cbCheckForUpdates = new MetroFramework.Controls.MetroRadioButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.SetPlayingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -125,6 +127,103 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(18, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 15);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Chat response";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(133, 123);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 15);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Ignore account";
+            // 
+            // cbIgnoreAccount
+            // 
+            this.cbIgnoreAccount.AutoSize = true;
+            this.cbIgnoreAccount.Location = new System.Drawing.Point(21, 122);
+            this.cbIgnoreAccount.Name = "cbIgnoreAccount";
+            this.cbIgnoreAccount.Size = new System.Drawing.Size(80, 19);
+            this.cbIgnoreAccount.TabIndex = 17;
+            this.cbIgnoreAccount.Tag = "ghfgh";
+            this.cbIgnoreAccount.Text = "Off";
+            this.cbIgnoreAccount.UseStyleColors = true;
+            this.cbIgnoreAccount.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(133, 98);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 15);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Restart Games";
+            // 
+            // cbRestartGames
+            // 
+            this.cbRestartGames.AutoSize = true;
+            this.cbRestartGames.Location = new System.Drawing.Point(21, 97);
+            this.cbRestartGames.Name = "cbRestartGames";
+            this.cbRestartGames.Size = new System.Drawing.Size(80, 19);
+            this.cbRestartGames.TabIndex = 15;
+            this.cbRestartGames.Tag = "ghfgh";
+            this.cbRestartGames.Text = "Off";
+            this.cbRestartGames.UseStyleColors = true;
+            this.cbRestartGames.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(133, 73);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 15);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Steam Community";
+            // 
+            // cbCommunity
+            // 
+            this.cbCommunity.AutoSize = true;
+            this.cbCommunity.Checked = true;
+            this.cbCommunity.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbCommunity.Location = new System.Drawing.Point(21, 72);
+            this.cbCommunity.Name = "cbCommunity";
+            this.cbCommunity.Size = new System.Drawing.Size(80, 19);
+            this.cbCommunity.TabIndex = 13;
+            this.cbCommunity.Tag = "ghfgh";
+            this.cbCommunity.Text = "On";
+            this.cbCommunity.UseStyleColors = true;
+            this.cbCommunity.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(133, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 15);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Steam Group";
+            // 
+            // cbJoinGroup
+            // 
+            this.cbJoinGroup.AutoSize = true;
+            this.cbJoinGroup.Checked = true;
+            this.cbJoinGroup.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbJoinGroup.Location = new System.Drawing.Point(21, 47);
+            this.cbJoinGroup.Name = "cbJoinGroup";
+            this.cbJoinGroup.Size = new System.Drawing.Size(80, 19);
+            this.cbJoinGroup.TabIndex = 11;
+            this.cbJoinGroup.Tag = "ghfgh";
+            this.cbJoinGroup.Text = "On";
+            this.cbJoinGroup.UseStyleColors = true;
+            this.cbJoinGroup.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -283,17 +382,19 @@
             // gameListMenu
             // 
             this.gameListMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.removeToolStripMenuItem});
+            this.removeToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.SetPlayingToolStripMenuItem});
             this.gameListMenu.Name = "gameListMenu";
             this.gameListMenu.ShowImageMargin = false;
-            this.gameListMenu.Size = new System.Drawing.Size(127, 26);
+            this.gameListMenu.Size = new System.Drawing.Size(156, 76);
             this.gameListMenu.Opening += new System.ComponentModel.CancelEventHandler(this.gameListMenu_Opening);
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.removeToolStripMenuItem.Text = "Remove Game";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
@@ -383,102 +484,16 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "General";
             // 
-            // label2
+            // cbHideToTray
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(133, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 15);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Steam Group";
-            // 
-            // cbJoinGroup
-            // 
-            this.cbJoinGroup.AutoSize = true;
-            this.cbJoinGroup.Checked = true;
-            this.cbJoinGroup.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbJoinGroup.Location = new System.Drawing.Point(21, 47);
-            this.cbJoinGroup.Name = "cbJoinGroup";
-            this.cbJoinGroup.Size = new System.Drawing.Size(80, 19);
-            this.cbJoinGroup.TabIndex = 11;
-            this.cbJoinGroup.Tag = "ghfgh";
-            this.cbJoinGroup.Text = "On";
-            this.cbJoinGroup.UseStyleColors = true;
-            this.cbJoinGroup.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(133, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 15);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Steam Community";
-            // 
-            // cbCommunity
-            // 
-            this.cbCommunity.AutoSize = true;
-            this.cbCommunity.Checked = true;
-            this.cbCommunity.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbCommunity.Location = new System.Drawing.Point(21, 72);
-            this.cbCommunity.Name = "cbCommunity";
-            this.cbCommunity.Size = new System.Drawing.Size(80, 19);
-            this.cbCommunity.TabIndex = 13;
-            this.cbCommunity.Tag = "ghfgh";
-            this.cbCommunity.Text = "On";
-            this.cbCommunity.UseStyleColors = true;
-            this.cbCommunity.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(133, 98);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 15);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Restart Games";
-            // 
-            // cbRestartGames
-            // 
-            this.cbRestartGames.AutoSize = true;
-            this.cbRestartGames.Location = new System.Drawing.Point(21, 97);
-            this.cbRestartGames.Name = "cbRestartGames";
-            this.cbRestartGames.Size = new System.Drawing.Size(80, 19);
-            this.cbRestartGames.TabIndex = 15;
-            this.cbRestartGames.Tag = "ghfgh";
-            this.cbRestartGames.Text = "Off";
-            this.cbRestartGames.UseStyleColors = true;
-            this.cbRestartGames.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(133, 123);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 15);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Ignore account";
-            // 
-            // cbIgnoreAccount
-            // 
-            this.cbIgnoreAccount.AutoSize = true;
-            this.cbIgnoreAccount.Location = new System.Drawing.Point(21, 122);
-            this.cbIgnoreAccount.Name = "cbIgnoreAccount";
-            this.cbIgnoreAccount.Size = new System.Drawing.Size(80, 19);
-            this.cbIgnoreAccount.TabIndex = 17;
-            this.cbIgnoreAccount.Tag = "ghfgh";
-            this.cbIgnoreAccount.Text = "Off";
-            this.cbIgnoreAccount.UseStyleColors = true;
-            this.cbIgnoreAccount.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 182);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 15);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Chat response";
+            this.cbHideToTray.AutoSize = true;
+            this.cbHideToTray.Location = new System.Drawing.Point(9, 46);
+            this.cbHideToTray.Name = "cbHideToTray";
+            this.cbHideToTray.Size = new System.Drawing.Size(85, 15);
+            this.cbHideToTray.TabIndex = 10;
+            this.cbHideToTray.TabStop = true;
+            this.cbHideToTray.Text = "Hide to tray";
+            this.cbHideToTray.UseVisualStyleBackColor = true;
             // 
             // cbCheckForUpdates
             // 
@@ -491,16 +506,17 @@
             this.cbCheckForUpdates.Text = "Check for updates";
             this.cbCheckForUpdates.UseVisualStyleBackColor = true;
             // 
-            // cbHideToTray
+            // toolStripSeparator1
             // 
-            this.cbHideToTray.AutoSize = true;
-            this.cbHideToTray.Location = new System.Drawing.Point(9, 46);
-            this.cbHideToTray.Name = "cbHideToTray";
-            this.cbHideToTray.Size = new System.Drawing.Size(85, 15);
-            this.cbHideToTray.TabIndex = 10;
-            this.cbHideToTray.TabStop = true;
-            this.cbHideToTray.Text = "Hide to tray";
-            this.cbHideToTray.UseVisualStyleBackColor = true;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(152, 6);
+            // 
+            // SetPlayingToolStripMenuItem
+            // 
+            this.SetPlayingToolStripMenuItem.Name = "SetPlayingToolStripMenuItem";
+            this.SetPlayingToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.SetPlayingToolStripMenuItem.Text = "Set as playing";
+            this.SetPlayingToolStripMenuItem.Click += new System.EventHandler(this.SetPlayingToolStripMenuItem_Click);
             // 
             // AppHome
             // 
@@ -584,6 +600,8 @@
         private MetroFramework.Controls.MetroToggle cbJoinGroup;
         private MetroFramework.Controls.MetroRadioButton cbHideToTray;
         private MetroFramework.Controls.MetroRadioButton cbCheckForUpdates;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem SetPlayingToolStripMenuItem;
     }
 }
 

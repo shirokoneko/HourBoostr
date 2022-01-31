@@ -646,7 +646,7 @@ namespace HourBoostr
             if (state)
                 gameList = mSteam.games;
 
-            ClientMsgProtobuf<CMsgClientGamesPlayed> request = new ClientMsgProtobuf<CMsgClientGamesPlayed>(EMsg.ClientGamesPlayedWithDataBlob)
+            ClientMsgProtobuf<CMsgClientGamesPlayed> request = new(EMsg.ClientGamesPlayedWithDataBlob)
             {
                 Body = {
                     client_os_type = (uint) OSType
@@ -655,11 +655,25 @@ namespace HourBoostr
 
             if (!mPlayingBlocked)
             {
-                /*Set up requested games*/
-                foreach (int gameID in gameList)
-                {
-                    request.Body.games_played.Add(new CMsgClientGamesPlayed.GamePlayed { game_id = new GameID(gameID) });
+                var OtherGames = new List<uint>();
+                
+                void sortGames(uint CurrentGame, uint ActiveGame)
+                { 
+                    if (CurrentGame == ActiveGame && ActiveGame != 0)
+                    {
+                        request.Body.games_played.Add(new CMsgClientGamesPlayed.GamePlayed { game_id = new GameID(CurrentGame) }); 
+                        mLog.Write(LogLevel.Info, $"AppID: {CurrentGame} has been set as playing status");
+                        mSteam.client.Send(request);
+                    }
+                    else
+                        OtherGames.Add(CurrentGame);
                 }
+
+                //Find main game to set as playing status and sort other games into list
+                gameList.ForEach(x => sortGames((uint)x, mAccountSettings.ActiveGame));
+
+                //Set other games as playing
+                OtherGames.ForEach(x => request.Body.games_played.Add(new CMsgClientGamesPlayed.GamePlayed { game_id = new GameID(x) })); 
             }
 
             /*Tell the client that we're playing these games*/

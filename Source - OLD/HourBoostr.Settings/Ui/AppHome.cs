@@ -433,6 +433,23 @@ namespace HourBoostr.Settings.Ui
             RefreshGameList();
         }
 
+        private void SetPlayingToolStripMenuItem_Click(object sender, EventArgs e) => SetActiveGame();
+
+        private void SetActiveGame()
+        {
+            if (mSettings.Accounts.Any())
+            {
+                gameList.SetSelected(gameList.SelectedIndex, true);
+                mActiveAccount.ActiveGame = (uint)(int)gameList.SelectedItem;
+                MessageBox.Show($"AppID: ({gameList.SelectedItem}) Will be set as currently playing", mActiveAccount.Details.Username);
+                SaveAccountJson();
+            }
+            else
+            {
+                MessageBox.Show("No account loaded", "Error");
+            }
+        }
+
         /// <summary>
         /// Prevents any typing in loginkey textbox
         /// Not using ReadOnly because I don't like how it greys it out
@@ -559,6 +576,7 @@ namespace HourBoostr.Settings.Ui
         /// </summary>
         /// <param name="sender">object</param>
         /// <param name="e">EventArgs</param>
-        private void lblStartBooster_MouseLeave(object sender, EventArgs e) => lblStartBooster.ForeColor = Color.Gray; 
+        private void lblStartBooster_MouseLeave(object sender, EventArgs e) => lblStartBooster.ForeColor = Color.Gray;
+        
     }
 }

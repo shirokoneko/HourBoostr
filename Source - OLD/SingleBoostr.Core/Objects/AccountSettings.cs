@@ -58,6 +58,11 @@ namespace SingleBoostr.Core.Objects
         /// <summary>
         /// 
         /// </summary>
+        public uint ActiveGame { get; set; } = 0;
+
+        /// <summary>
+        /// 
+        /// </summary>
         public SteamKit2.EOSType OSType { get; set; } = SteamKit2.EOSType.Windows10;
     }
 }
