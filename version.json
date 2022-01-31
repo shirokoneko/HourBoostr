@@ -9,6 +9,11 @@
       "Name":"HourBoostr",
       "Version": "4.3.0",
       "Info": "Hotfix and new features to set specific game or custom status"
+    },
+    {
+      "Name":"MultiBoostr",
+      "Version": "0.0.1",
+      "Info": "Beta"
     }
   ]
 }
