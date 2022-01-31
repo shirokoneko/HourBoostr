@@ -653,16 +653,33 @@ namespace HourBoostr
                 }
             };
 
+            
             if (!mPlayingBlocked)
             {
+                var customStatus = mAccountSettings.ActiveGame.Equals(uint.MaxValue) && !string.IsNullOrEmpty(mAccountSettings.CustomStatus);
                 var OtherGames = new List<uint>();
+
+                if (customStatus)
+                {
+                    request.Body.games_played.Add(new CMsgClientGamesPlayed.GamePlayed
+                    {
+                        game_id = new GameID
+                        {
+                            AppType = GameID.GameType.Shortcut,
+                            ModID = mAccountSettings.ActiveGame
+                        },
+                        game_extra_info = mAccountSettings.CustomStatus
+                    });
+                    mLog.Write(LogLevel.Info, $"Status Set: ({mAccountSettings.CustomStatus}) has been set as playing");
+                    mSteam.client.Send(request);
+                }
                 
                 void sortGames(uint CurrentGame, uint ActiveGame)
                 { 
-                    if (CurrentGame == ActiveGame && ActiveGame != 0)
+                    if (CurrentGame == ActiveGame && ActiveGame != 0 && !customStatus)
                     {
                         request.Body.games_played.Add(new CMsgClientGamesPlayed.GamePlayed { game_id = new GameID(CurrentGame) }); 
-                        mLog.Write(LogLevel.Info, $"AppID: {CurrentGame} has been set as playing status");
+                        mLog.Write(LogLevel.Info, $"AppID: ({CurrentGame}) has been set as playing status");
                         mSteam.client.Send(request);
                     }
                     else

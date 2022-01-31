@@ -450,6 +450,15 @@ namespace HourBoostr.Settings.Ui
             }
         }
 
+        private void txtStatus_TextChanged(object sender, EventArgs e)
+        { 
+            if (mSettings.Accounts.Any())
+            { 
+                mActiveAccount.ActiveGame = uint.MaxValue;
+                mActiveAccount.CustomStatus = txtStatus.Text;  
+            }
+        }
+
         /// <summary>
         /// Prevents any typing in loginkey textbox
         /// Not using ReadOnly because I don't like how it greys it out
@@ -577,6 +586,5 @@ namespace HourBoostr.Settings.Ui
         /// <param name="sender">object</param>
         /// <param name="e">EventArgs</param>
         private void lblStartBooster_MouseLeave(object sender, EventArgs e) => lblStartBooster.ForeColor = Color.Gray;
-        
     }
 }

@@ -58,7 +58,12 @@ namespace SingleBoostr.Core.Objects
         /// <summary>
         /// 
         /// </summary>
-        public uint ActiveGame { get; set; } = 0;
+        public uint ActiveGame { get; set; } = 4294967295;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string CustomStatus { get; set; } = "HourBoostr";
 
         /// <summary>
         /// 

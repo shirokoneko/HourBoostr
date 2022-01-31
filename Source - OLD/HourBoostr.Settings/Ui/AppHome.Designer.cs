@@ -58,6 +58,8 @@
             this.gameList = new System.Windows.Forms.ListBox();
             this.gameListMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.SetPlayingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblNewAccount = new System.Windows.Forms.Label();
             this.panelSettings = new System.Windows.Forms.Panel();
@@ -68,8 +70,8 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.cbHideToTray = new MetroFramework.Controls.MetroRadioButton();
             this.cbCheckForUpdates = new MetroFramework.Controls.MetroRadioButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.SetPlayingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtStatus = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -85,9 +87,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox1.Location = new System.Drawing.Point(179, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(179, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1, 328);
+            this.pictureBox1.Size = new System.Drawing.Size(1, 370);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -107,6 +109,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtStatus);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cbIgnoreAccount);
@@ -123,7 +127,7 @@
             this.groupBox1.Controls.Add(this.txtResponse);
             this.groupBox1.Location = new System.Drawing.Point(3, 133);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(304, 215);
+            this.groupBox1.Size = new System.Drawing.Size(304, 243);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings";
@@ -338,7 +342,7 @@
             this.groupBox3.Controls.Add(this.gameList);
             this.groupBox3.Location = new System.Drawing.Point(313, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(243, 336);
+            this.groupBox3.Size = new System.Drawing.Size(243, 364);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Games";
@@ -347,7 +351,7 @@
             // 
             this.lblFindGames.AutoSize = true;
             this.lblFindGames.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblFindGames.Location = new System.Drawing.Point(156, 301);
+            this.lblFindGames.Location = new System.Drawing.Point(156, 333);
             this.lblFindGames.Name = "lblFindGames";
             this.lblFindGames.Size = new System.Drawing.Size(69, 15);
             this.lblFindGames.TabIndex = 4;
@@ -359,7 +363,7 @@
             // txtGameItem
             // 
             this.txtGameItem.ForeColor = System.Drawing.Color.Gray;
-            this.txtGameItem.Location = new System.Drawing.Point(6, 298);
+            this.txtGameItem.Location = new System.Drawing.Point(6, 330);
             this.txtGameItem.Name = "txtGameItem";
             this.txtGameItem.Size = new System.Drawing.Size(228, 23);
             this.txtGameItem.TabIndex = 3;
@@ -375,7 +379,7 @@
             this.gameList.ItemHeight = 15;
             this.gameList.Location = new System.Drawing.Point(6, 22);
             this.gameList.Name = "gameList";
-            this.gameList.Size = new System.Drawing.Size(231, 264);
+            this.gameList.Size = new System.Drawing.Size(231, 296);
             this.gameList.TabIndex = 2;
             this.gameList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gameList_MouseDown);
             // 
@@ -387,16 +391,28 @@
             this.SetPlayingToolStripMenuItem});
             this.gameListMenu.Name = "gameListMenu";
             this.gameListMenu.ShowImageMargin = false;
-            this.gameListMenu.Size = new System.Drawing.Size(156, 76);
+            this.gameListMenu.Size = new System.Drawing.Size(127, 54);
             this.gameListMenu.Opening += new System.ComponentModel.CancelEventHandler(this.gameListMenu_Opening);
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.removeToolStripMenuItem.Text = "Remove Game";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(123, 6);
+            // 
+            // SetPlayingToolStripMenuItem
+            // 
+            this.SetPlayingToolStripMenuItem.Name = "SetPlayingToolStripMenuItem";
+            this.SetPlayingToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.SetPlayingToolStripMenuItem.Text = "Set as playing";
+            this.SetPlayingToolStripMenuItem.Click += new System.EventHandler(this.SetPlayingToolStripMenuItem_Click);
             // 
             // groupBox4
             // 
@@ -404,7 +420,7 @@
             this.groupBox4.Controls.Add(this.accountListBox);
             this.groupBox4.Location = new System.Drawing.Point(12, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(155, 162);
+            this.groupBox4.Size = new System.Drawing.Size(155, 217);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             // 
@@ -429,7 +445,7 @@
             this.panelSettings.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelSettings.Location = new System.Drawing.Point(186, 0);
             this.panelSettings.Name = "panelSettings";
-            this.panelSettings.Size = new System.Drawing.Size(559, 351);
+            this.panelSettings.Size = new System.Drawing.Size(559, 379);
             this.panelSettings.TabIndex = 11;
             this.panelSettings.Visible = false;
             // 
@@ -466,7 +482,7 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.lblStartBooster);
-            this.groupBox6.Location = new System.Drawing.Point(12, 293);
+            this.groupBox6.Location = new System.Drawing.Point(12, 321);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(155, 55);
             this.groupBox6.TabIndex = 11;
@@ -477,9 +493,9 @@
             // 
             this.groupBox5.Controls.Add(this.cbHideToTray);
             this.groupBox5.Controls.Add(this.cbCheckForUpdates);
-            this.groupBox5.Location = new System.Drawing.Point(12, 180);
+            this.groupBox5.Location = new System.Drawing.Point(12, 235);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(155, 107);
+            this.groupBox5.Size = new System.Drawing.Size(155, 80);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "General";
@@ -506,24 +522,32 @@
             this.cbCheckForUpdates.Text = "Check for updates";
             this.cbCheckForUpdates.UseVisualStyleBackColor = true;
             // 
-            // toolStripSeparator1
+            // label7
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(152, 6);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(18, 212);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 15);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Custom Status";
             // 
-            // SetPlayingToolStripMenuItem
+            // txtStatus
             // 
-            this.SetPlayingToolStripMenuItem.Name = "SetPlayingToolStripMenuItem";
-            this.SetPlayingToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.SetPlayingToolStripMenuItem.Text = "Set as playing";
-            this.SetPlayingToolStripMenuItem.Click += new System.EventHandler(this.SetPlayingToolStripMenuItem_Click);
+            this.txtStatus.ForeColor = System.Drawing.Color.Gray;
+            this.txtStatus.Location = new System.Drawing.Point(136, 209);
+            this.txtStatus.Multiline = true;
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(145, 23);
+            this.txtStatus.TabIndex = 20;
+            this.txtStatus.Text = "HourBoostr";
+            this.txtStatus.TextChanged += new System.EventHandler(this.txtStatus_TextChanged);
             // 
             // AppHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(745, 351);
+            this.ClientSize = new System.Drawing.Size(745, 379);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox4);
@@ -602,6 +626,8 @@
         private MetroFramework.Controls.MetroRadioButton cbCheckForUpdates;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem SetPlayingToolStripMenuItem;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtStatus;
     }
 }
 

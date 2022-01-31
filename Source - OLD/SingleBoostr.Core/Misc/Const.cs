@@ -62,7 +62,7 @@ namespace SingleBoostr.Core.Misc
         public sealed class HourBoostr
         {
             public const string NAME = "HourBoostr";
-            public const string VERSION = "4.2.1";
+            public const string VERSION = "4.3.0";
             public static string IDLER_EXE => $"{NAME}.exe";
             public static string SETTINGS_EXE => $"{NAME}.Settings.exe";
             public static string SETTINGS_FILE => $"{NAME}.Settings.json";
