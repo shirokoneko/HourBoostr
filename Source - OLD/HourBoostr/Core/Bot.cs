@@ -412,9 +412,15 @@ namespace HourBoostr
                     return;
 
                 case EResult.RateLimitExceeded:
-                    var delay = SingleBoostr.Core.Misc.Const.Steam.RATE_DELAY;
-                    mLog.Write(LogLevel.Warn, $"IP has been rate limited. Waiting {delay} minute");
+                    var delay = SingleBoostr.Core.Misc.Const.Steam.Delays.RATE_LIMIT_EXCEEDED;
+                    mLog.Write(LogLevel.Warn, $"IP has been rate limited. Waiting {delay} minutes");
                     Thread.Sleep(TimeSpan.FromMinutes(delay));
+                    return;
+
+                case EResult.AccountLimitExceeded:
+                    var delay2 = SingleBoostr.Core.Misc.Const.Steam.Delays.ACCOUNT_LIMIT_EXCEEDED;
+                    mLog.Write(LogLevel.Warn, $"Account Limit Exceeded. Waiting {delay2} minutes");
+                    Thread.Sleep(TimeSpan.FromMinutes(delay2));
                     return;
             }
 
