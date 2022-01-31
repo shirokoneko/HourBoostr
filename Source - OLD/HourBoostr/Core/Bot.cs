@@ -410,6 +410,12 @@ namespace HourBoostr
                     mLog.Write(LogLevel.Warn, $"Service unavailable. Waiting 1 minute.");
                     Thread.Sleep(TimeSpan.FromMinutes(1));
                     return;
+
+                case EResult.RateLimitExceeded:
+                    var delay = SingleBoostr.Core.Misc.Const.Steam.RATE_DELAY;
+                    mLog.Write(LogLevel.Warn, $"IP has been rate limited. Waiting {delay} minute");
+                    Thread.Sleep(TimeSpan.FromMinutes(delay));
+                    return;
             }
 
             /*We didn't account for what happened*/

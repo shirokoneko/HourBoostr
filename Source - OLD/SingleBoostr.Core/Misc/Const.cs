@@ -31,6 +31,7 @@ namespace SingleBoostr.Core.Misc
             public static string STORE_JSON_URL => Utils.STEAM_URL("store", "api/appdetails/?appids=");
             public static string CARD_PRICE_URL => Utils.STEAM_URL("enhancedsteam", "market_data/average_card_prices/?cur=eur&appids=");
             public static readonly int MAX_GAMES = 33;
+            public static readonly int RATE_DELAY = 30;
 
             public sealed class Example_Profile
             {
