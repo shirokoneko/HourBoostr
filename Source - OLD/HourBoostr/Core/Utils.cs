@@ -8,12 +8,7 @@ namespace HourBoostr
 {
     internal class Utils
     {
-        public static string GetVersion()
-        {
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
-            return fileVersionInfo.ProductVersion;
-        }
+        public static string GetVersion() => SingleBoostr.Core.Misc.Updater.GetLocalVersion(Assembly.GetExecutingAssembly());
 
         /// <summary>
         /// Masked password input
