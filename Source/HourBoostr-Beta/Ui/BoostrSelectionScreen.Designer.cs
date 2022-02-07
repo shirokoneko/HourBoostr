@@ -38,7 +38,6 @@
             this.MultiBoostrButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.SingleBoostrButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.WindowElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.HeaderTitle = new Bunifu.UI.WinForms.BunifuLabel();
             this.HeaderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +56,6 @@
             this.HeaderPanel.BorderColor = System.Drawing.Color.Transparent;
             this.HeaderPanel.BorderRadius = 3;
             this.HeaderPanel.BorderThickness = 1;
-            this.HeaderPanel.Controls.Add(this.HeaderTitle);
             this.HeaderPanel.Controls.Add(this.ExitButton);
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanel.Location = new System.Drawing.Point(0, 0);
@@ -210,22 +208,6 @@
             this.WindowElipse.ElipseRadius = 15;
             this.WindowElipse.TargetControl = this;
             // 
-            // HeaderTitle
-            // 
-            this.HeaderTitle.AllowParentOverrides = false;
-            this.HeaderTitle.AutoEllipsis = false;
-            this.HeaderTitle.CursorType = null;
-            this.HeaderTitle.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HeaderTitle.ForeColor = System.Drawing.Color.Gainsboro;
-            this.HeaderTitle.Location = new System.Drawing.Point(354, 7);
-            this.HeaderTitle.Name = "HeaderTitle";
-            this.HeaderTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.HeaderTitle.Size = new System.Drawing.Size(103, 22);
-            this.HeaderTitle.TabIndex = 6;
-            this.HeaderTitle.Text = "HourBoostr";
-            this.HeaderTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.HeaderTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // BoostrSelectionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,7 +227,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BoostrSelectionScreen";
             this.HeaderPanel.ResumeLayout(false);
-            this.HeaderPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,6 +242,5 @@
         private Bunifu.UI.WinForms.BunifuLabel SingleBoostrLabel;
         private Bunifu.UI.WinForms.BunifuLabel MultiBoostrLabel;
         private Bunifu.Framework.UI.BunifuElipse WindowElipse;
-        private Bunifu.UI.WinForms.BunifuLabel HeaderTitle;
     }
 }
