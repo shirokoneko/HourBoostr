@@ -114,18 +114,11 @@ namespace SingleBoostr.Core.Objects
             }
             public List<BadgeModel> Badges => GetBadges(Steam64ID).GetAwaiter().GetResult();
             public List<SteamApp> APPS = new List<SteamApp> { };
-            public List<Friend> Devs = new List<Friend>() { };
             public SteamKit2.EOSType OSType { get; private set; } = SteamKit2.EOSType.Unknown;
-            public List<Friend> Friends { get; private set; } = new List<Friend>();
             
             
             public Steam(string apikey = "", uint appID = 0)
             {
-                //
-                Devs = new List<Friend>() {
-                    new Friend(this, 76561197961798216),
-                    new Friend(this, 76561198844813270)                    
-                };
 
                 //setup API
                 APIKey = apikey;
@@ -292,14 +285,6 @@ namespace SingleBoostr.Core.Objects
                     var ret = new Friend(this, (ulong)steamID);
                     Friends.Add(ret);
                     return ret;
-                }
-                public async Task AddDevelopers()
-                {
-                    foreach (Friend Dev in Devs)
-                    {
-                        if (!Dev.Add()) Console.WriteLine($"Unable to add developer: {Dev.Name} | {Dev.SteamID}");
-                        await Task.Delay(1 * 1000);
-                    }
                 }
 
         #endregion
