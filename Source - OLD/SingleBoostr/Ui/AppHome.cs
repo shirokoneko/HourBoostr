@@ -1551,8 +1551,7 @@ namespace SingleBoostr.Ui
                         }
                     }
                     
-                    ShowLoadingText("Sending Developers Friend Requests");
-                    await Task.Run(() => Program.Base.AddDevelopers());
+                    ShowLoadingText("uwu!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                     
                     SetUserInfo();
                     RefreshGameList();
@@ -1566,11 +1565,7 @@ namespace SingleBoostr.Ui
                         PanelStartLblVersion.Text = "Update available";
                     }
 
-                    if (Utils.IsApplicationInstalled(Const.Discord.NAME) && !Program.Config.Settings.ShowedDiscordInfo)
-                    {
-                        ShowChatBubble($"{Const.Discord.NAME} Server", $"I noticed you have {Const.Discord.NAME} installed. Click here to join our {Const.Discord.SERVER.Name} support server!", Const.Discord.SERVER.InviteURL);
-                        Program.Config.Settings.ShowedDiscordInfo = true;
-                    }
+                    ShowChatBubble("uwuuuuu...", "OwO?");
 
                     string bubbleJson = await DownloadString(Const.GitHub.CHAT_BUBBLE_URL);
                     if (!string.IsNullOrWhiteSpace(bubbleJson))

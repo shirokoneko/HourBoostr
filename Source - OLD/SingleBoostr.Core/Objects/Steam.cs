@@ -115,9 +115,10 @@ namespace SingleBoostr.Core.Objects
             public List<BadgeModel> Badges => GetBadges(Steam64ID).GetAwaiter().GetResult();
             public List<SteamApp> APPS = new List<SteamApp> { };
             public SteamKit2.EOSType OSType { get; private set; } = SteamKit2.EOSType.Unknown;
-            
-            
-            public Steam(string apikey = "", uint appID = 0)
+            public List<Friend> Friends { get; private set; } = new List<Friend>();
+
+
+        public Steam(string apikey = "", uint appID = 0)
             {
 
                 //setup API
